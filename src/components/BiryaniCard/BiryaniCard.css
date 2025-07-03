@@ -1,0 +1,171 @@
+        .slide-card {
+            flex: 0 0 320px;
+            background: white;
+            border-radius: 20px;
+            overflow: hidden;       
+            transition: all 0.3s ease;
+            position: relative;
+            padding-bottom: 30px;
+            background-repeat:no-repeat
+        }
+
+        .slide-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 212px 522px rgba(0, 0, 0, 0.15);
+        }
+
+        .image-container {
+            position: relative;
+            height: 280px;
+            overflow: hidden;         
+        }
+        .slide-image {
+            width: 100%;         
+            height: 240px;
+            background-size: cover;
+            background-position: center;
+            transition: 1s;
+        }
+        
+      
+        .slide-card:hover.slide-image {
+            transform: scale(1.05);
+        }
+        .best-seller-badge {
+            position: absolute;
+            top: -14px;
+            left: -15px;
+            width: 8rem;
+            background:#ec3b3b;
+            color: white;
+            height: 50px;
+            border-radius: 15px;
+            font-size: 15px;
+            font-weight: 600;
+            padding-top: 18px;
+            padding-left: 20px;
+            text-align: center;
+            font-family: 'Archivo Narrow';
+        }
+        .content {
+            padding: 0 5px;
+        }
+        .content h3{
+          font-size: 20px;
+          font-weight: 700;
+          color: #6E260E;
+          font-family: 'Barlow Condensed';
+        }
+        .dish-name {
+            font-size: 1.8rem;
+            font-weight: bold;
+            color: #8b4513;
+            margin-bottom: 15px;
+        }
+        .dish-name h3{
+          font-size: 3.8rem;
+        }
+        .description {
+            color: #666;
+            line-height: 1.6;
+              font-size: 1rem;
+        }
+        .veg-nonveg-icon {
+          width: 20px;
+          height: 20px;
+          position: absolute;
+          bottom: 8px;
+          right: 8px;
+        }
+
+        .price {
+          font-weight: bold;
+          color: #6d260c;
+          margin: 5px 0;
+        }
+
+        .quantity-controls {
+          display: flex;
+          align-items: center;
+          gap: 10px;
+        }
+
+        .quantity-controls button {
+          padding: 4px 10px;
+          font-size: 16px;
+          background-color: #6d260c;
+          color: white;
+          border: none;
+          cursor: pointer;
+        }
+
+        .quantity-selector {
+          display: flex;
+          align-items: center;
+          margin-top: 10px;
+          padding-left: 5px;
+        }
+
+        .quantity-selector label {
+          display: flex;
+          align-items: center;  
+          padding-right: 15px;
+          font-weight: 600;
+          font-size: 20px;
+        }
+
+
+        .qty-buttons {
+          display: flex;
+          align-items: center;
+          gap: 10px;
+        }
+
+        .qty-buttons button {
+          background-color: #6d260c;
+          border: none;
+          color: white;
+          padding: 4px 10px;
+          font-size: 18px;
+          cursor: pointer;
+          border-radius: 45px;
+        }
+
+        .qty-buttons span {
+          font-weight: bold;
+          font-size: 16px;
+        }
+        .image-container{
+          border-radius: 12px;
+          height: 240px;
+        }
+
+       .add-to-cart-btn {
+        padding: 0.6rem 1.2rem;
+        background-color: #6d260c;
+        color: white;
+        border: none;
+        border-radius: 8px;
+        cursor: pointer;
+        font-size: 9px;
+        padding-right: 20px;
+        font-weight: 700;
+        transition: background-color 0.3s;
+        display: flex;
+        margin-left: 20px; 
+      }
+
+        .add-to-cart-btn:hover {
+          background-color: #6d260c;
+        }
+
+        .add-to-cart-btn:active {
+          transform: scale(0.98);
+        }
+        .add-to-cart-container {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          margin-top: 1rem;
+        }
+
