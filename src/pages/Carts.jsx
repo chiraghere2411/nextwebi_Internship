@@ -2,6 +2,8 @@ import React from 'react';
 import Layout from '../layout/Layout';
 import { useCart } from '../components/Context/CartContext';
 import '../global.css'; 
+import { Link } from 'react-router-dom'; 
+
 
 const Carts = () => {
   const { cartItems, updateItemQuantity, removeItem } = useCart();
@@ -66,7 +68,7 @@ const Carts = () => {
             <div className="cart-summary">
               <h2>Subtotal</h2>
               <p className="summary-price">₹{getTotalPrice().toFixed(2)}</p>
-              <button className="checkout-button">Proceed to Checkout</button>
+              <Link to="/checkout"><button className="checkout-button">Proceed to Checkout</button></Link>
             </div>
           </div>
         )}

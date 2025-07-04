@@ -1,9 +1,19 @@
-import React, { createContext, useContext, useState } from 'react';
+import React, { createContext, useContext, useState, useEffect } from 'react';
+import Cookies from 'js-cookie';
 
 const CartContext = createContext();
 
 export const CartProvider = ({ children }) => {
-  const [cartItems, setCartItems] = useState([]);
+  // ✅ Load cart items from cookies when the app starts
+  const [cartItems, setCartItems] = useState(() => {
+    const stored = Cookies.get('cartItems');
+    return stored ? JSON.parse(stored) : [];
+  });
+
+  // ✅ Save cart items to cookies whenever they change
+  useEffect(() => {
+    Cookies.set('cartItems', JSON.stringify(cartItems), { expires: 7 });
+  }, [cartItems]);
 
   const setItemQuantityByName = (name, newQuantity, itemDetails = {}) => {
     setCartItems((prev) => {
@@ -12,6 +22,7 @@ export const CartProvider = ({ children }) => {
       if (newQuantity <= 0) {
         return prev.filter((_, i) => i !== index);
       }
+
       if (index !== -1) {
         const updated = [...prev];
         updated[index].quantity = newQuantity;
@@ -21,6 +32,7 @@ export const CartProvider = ({ children }) => {
       }
     });
   };
+
   const updateItemQuantity = (index, newQuantity) => {
     setCartItems((prev) => {
       if (newQuantity < 1) {
