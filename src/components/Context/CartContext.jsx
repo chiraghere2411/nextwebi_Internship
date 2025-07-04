@@ -21,7 +21,6 @@ export const CartProvider = ({ children }) => {
       }
     });
   };
-
   const updateItemQuantity = (index, newQuantity) => {
     setCartItems((prev) => {
       if (newQuantity < 1) {

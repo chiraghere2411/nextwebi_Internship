@@ -1,5 +1,7 @@
 import React from 'react';
 import './BiryaniCard.css';
+import { toast } from 'react-toastify';
+
 import { useCart } from '../../components/Context/CartContext';
 
 const BiryaniCard = ({ image, name, description, badge, type, price, rating, previewMode = false }) => {
@@ -32,11 +34,19 @@ const BiryaniCard = ({ image, name, description, badge, type, price, rating, pre
 
   const handleAddToCart = () => {
     if (quantity > 0) {
-      alert(`${quantity} x ${name} is in the cart!`);
+      setItemQuantityByName(name, quantity, {
+        image,
+        badge,
+        type,
+        price: Number(price),
+        rating,
+      });
+      toast.success(`${quantity} x ${name} added to cart!`);
     } else {
-      alert('Please select a quantity before adding to cart.');
+      toast.error('Please select a quantity before adding to cart.');
     }
   };
+
 
   const renderStars = (count) =>
     Array.from({ length: 5 }, (_, i) => (
