@@ -1,7 +1,7 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Layout from '../layout/Layout';
 import BiryaniCard from 'components/BiryaniCard/BiryaniCard';
-import biryaniData from 'data/biryaniData.json';
+import axios from 'axios';
 import '../global.css';
 
 export default function Dine() {
@@ -12,7 +12,14 @@ export default function Dine() {
     category: null,
   });
 
+  const [menuData, setMenuData] = useState([]);
   const [showDropdown, setShowDropdown] = useState(false);
+
+  useEffect(() => {
+    axios.get('/api/menu')
+      .then((res) => setMenuData(res.data))
+      .catch((err) => console.error('Error fetching menu:', err));
+  }, []);
 
   const updateFilter = (key, value) => {
     setFilters((prev) => ({
@@ -41,7 +48,7 @@ export default function Dine() {
     }));
   };
 
-  const filteredData = biryaniData.filter((item) => {
+  const filteredData = menuData.filter((item) => {
     const { type, rating, badge, category } = filters;
 
     const matchesType = type === 'all' || item.type === type;
@@ -175,7 +182,7 @@ export default function Dine() {
             <p>No items match your filter.</p>
           ) : (
             filteredData.map((item) => (
-              <BiryaniCard key={item.name} {...item} />
+              <BiryaniCard key={item._id || item.name} {...item} />
             ))
           )}
         </div>

@@ -13,7 +13,7 @@ const Navbar = () => {
   return (
     <div className="navbar">
       <div className="logo">
-        <img src="/assets/logo 2.png" alt="Logo" style={{ height: '50px', width: 'auto' }} />
+        <img src="/assets/logo2.png" alt="Logo" style={{ height: '50px', width: 'auto' }} />
       </div>
 
       <nav className="nav-links">

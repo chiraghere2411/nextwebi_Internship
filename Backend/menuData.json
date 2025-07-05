@@ -1,0 +1,176 @@
+[
+  {
+    "id": 1,
+    "image": "/assets/ramba.png",
+    "name": "Rambha Biryani",
+    "description": "Bagara Biryani is fusion of Telengana special rice and many hidden recipes of tribes. Hence we call it as Folk Biryani or Naatu Biryani.",
+    "badge": "Best Seller",
+    "type": "nonveg",
+    "price": 240,
+    "category": ["other"],
+    "rating": 3
+  },
+  {
+    "id": 2,
+    "image": "/assets/egg1.png",
+    "name": "Chicken Biryani",
+    "description": "Bagara Biryani is fusion of Telengana special rice and many hidden recipes of tribes. Hence we call it as Folk Biryani or Naatu Biryani.",
+    "badge": "Best Seller",
+    "type": "nonveg",
+    "price": 200,
+    "category": ["nonveg-biryani"],
+    "rating": 4
+  },
+  {
+    "id": 3,
+    "image": "/assets/egg2.png",
+    "name": "Chicken Tikka Biryani",
+    "description": "Bagara Biryani is fusion of Telengana special rice and many hidden recipes of tribes. Hence we call it as Folk Biryani or Naatu Biryani.",
+    "type": "nonveg",
+    "price": 220,
+    "category": ["nonveg-biryani"],
+    "rating": 5
+  },
+  {
+    "id": 4,
+    "image": "/assets/egg1.png",
+    "name": "Egg Biryani",
+    "description": "Bagara Biryani is fusion of Telengana special rice and many hidden recipes of tribes. Hence we call it as Folk Biryani or Naatu Biryani.",
+    "type": "nonveg",
+    "price": 160,
+    "category": ["nonveg-biryani"],
+    "rating": 3
+  },
+  {
+    "id": 5,
+    "name": "Paneer Biryani",
+    "description": "Spicy biryani with marinated paneer and fragrant basmati rice.",
+    "image": "/assets/paneer1.png",
+    "badge": "Best Seller",
+    "type": "veg",
+    "price": 200,
+    "category": ["veg-biryani"],
+    "rating": 4
+  },
+  {
+    "id": 6,
+    "name": "Veg Dum Biryani",
+    "description": "Aromatic biryani slow-cooked with mixed vegetables and spices.",
+    "image": "/assets/dum.jpg",
+    "badge": "",
+    "type": "veg",
+    "price": 150,
+    "category": ["veg-biryani"],
+    "rating": 5
+  },
+  {
+    "id": 7,
+    "name": "Mutton Biryani",
+    "description": "Juicy mutton cooked with premium basmati rice and saffron.",
+    "image": "/assets/mutton.jpg",
+    "badge": "",
+    "type": "nonveg",
+    "price": 280,
+    "category": ["nonveg-biryani"],
+    "rating": 3
+  },
+  {
+    "id": 8,
+    "image": "/assets/kolkata.jpg",
+    "name": "Kolkata Chicken Biryani",
+    "description": "Mughlai-style biryani with potatoes and boiled egg",
+    "type": "nonveg",
+    "badge": "Best Seller",
+    "price": 250,
+    "category": ["nonveg-biryani"],
+    "rating": 4
+  },
+  {
+    "id": 9,
+    "image": "/assets/hyd.png",
+    "name": "Hyderabadi Mutton Biryani",
+    "description": "Aromatic mutton biryani with dum style spices",
+    "type": "nonveg",
+    "badge": "Best Seller",
+    "price": 250,
+    "category": ["nonveg-biryani"],
+    "rating": 5
+  },
+  {
+    "id": 10,
+    "image": "/assets/paneer.jpg",
+    "name": "Paneer Tikka Biryani",
+    "description": "Smoky paneer chunks in spicy biryani rice",
+    "type": "veg",
+    "badge": "Best Seller",
+    "price": 250,
+    "category": ["veg-biryani"],
+    "rating": 3
+  },
+  {
+    "id": 11,
+    "image": "/assets/mushroom.png",
+    "name": "Mushroom Biryani",
+    "description": "Earthy mushrooms with mint, spices and long grain rice",
+    "type": "veg",
+    "badge": "",
+    "price": 200,
+    "category": ["veg-biryani"],
+    "rating": 4
+  },
+  {
+    "id": 12,
+    "image": "/assets/soya.png",
+    "name": "Soya Chunk Biryani",
+    "description": "High protein biryani with spicy soya chunks",
+    "type": "veg",
+    "badge": "",
+    "price": 180,
+    "category": ["veg-biryani"],
+    "rating": 5
+  },
+  {
+    "id": 13,
+    "image": "/assets/pizza.png",
+    "name": "Panner Pizza",
+    "description": "High protein biryani with spicy soya chunks",
+    "type": "veg",
+    "badge": "",
+    "price": 180,
+    "category": ["pizza"],
+    "rating": 5
+  },
+  {
+    "id": 14,
+    "image": "/assets/burger.png",
+    "name": "Chicken BBQ Burger",
+    "description": "High protein biryani with spicy soya chunks",
+    "type": "nonveg",
+    "badge": "",
+    "price": 180,
+    "category": ["burger"],
+    "rating": 4
+  },
+  {
+    "id": 15,
+    "image": "/assets/burger1.png",
+    "name": "Chicken Burger",
+    "description": "High protein biryani with spicy soya chunks",
+    "type": "nonveg",
+    "badge": "Best Seller",
+    "price": 180,
+    "category": ["burger"],
+    "rating": 4
+  },
+  {
+    "id": 16,
+    "image": "/assets/pizza2.png",
+    "name": "Italian Chicken Pizza",
+    "description": "High protein biryani with spicy soya chunks",
+    "type": "nonveg",
+    "badge": "Best Seller",
+    "price": 180,
+    "category": ["pizza"],
+    "rating": 4
+  }
+]

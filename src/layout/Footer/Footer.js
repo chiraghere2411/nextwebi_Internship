@@ -7,7 +7,7 @@ const Footer = () => {
       <div className="footer-container">
         <div className="footer-logo">
           <img
-            src="/assets/logo 2.png"
+            src="/assets/logo2.png"
             style={{ height: "70px", width: "auto"}}
             alt="Logo"
           />

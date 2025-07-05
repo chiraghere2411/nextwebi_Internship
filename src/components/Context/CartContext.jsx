@@ -1,16 +1,16 @@
 import React, { createContext, useContext, useState, useEffect } from 'react';
 import Cookies from 'js-cookie';
+import { toast } from 'react-toastify';
 
 const CartContext = createContext();
 
 export const CartProvider = ({ children }) => {
-  // ✅ Load cart items from cookies when the app starts
   const [cartItems, setCartItems] = useState(() => {
     const stored = Cookies.get('cartItems');
     return stored ? JSON.parse(stored) : [];
   });
 
-  // ✅ Save cart items to cookies whenever they change
+  // ✅ Sync cart with cookies on every change
   useEffect(() => {
     Cookies.set('cartItems', JSON.stringify(cartItems), { expires: 7 });
   }, [cartItems]);
@@ -48,6 +48,12 @@ export const CartProvider = ({ children }) => {
     setCartItems((prev) => prev.filter((_, i) => i !== index));
   };
 
+  const clearCart = () => {
+    setCartItems([]);
+    Cookies.remove('cartItems');
+    toast.info('🛒 Cart has been cleared');
+  };
+
   return (
     <CartContext.Provider
       value={{
@@ -55,6 +61,7 @@ export const CartProvider = ({ children }) => {
         setItemQuantityByName,
         updateItemQuantity,
         removeItem,
+        clearCart,
       }}
     >
       {children}

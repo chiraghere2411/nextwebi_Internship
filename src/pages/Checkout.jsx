@@ -1,35 +1,40 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import Cookies from 'js-cookie';
 import { useCart } from '../components/Context/CartContext';
 import { toast } from 'react-toastify';
+import { useNavigate } from 'react-router-dom';
 import '../global.css';
 
 const Checkout = () => {
-  const { cartItems } = useCart();
+  const { cartItems, clearCart } = useCart();
+  const navigate = useNavigate(); 
+
   const [name, setName] = useState('');
   const [phone, setPhone] = useState('');
   const [address, setAddress] = useState('');
 
-  useEffect(() => {
-    const stored = Cookies.get('userInfo');
-    if (stored) {
-      const parsed = JSON.parse(stored);
-      setName(parsed.name || '');
-      setPhone(parsed.phone || '');
-      setAddress(parsed.address || '');
-    }
-  }, []);
-
   const total = cartItems.reduce((acc, item) => acc + item.price * item.quantity, 0);
+
 
   const handleSubmit = (e) => {
     e.preventDefault();
+
     const userData = { name, phone, address };
     Cookies.set('userInfo', JSON.stringify(userData), { expires: 7 });
 
-    toast.success('✅ Order placed successfully!');
+    toast.success('Thank you! Order placed successfully');
+
     console.log('User:', userData);
     console.log('Cart:', cartItems);
+
+    clearCart();
+    setName('');
+    setPhone('');
+    setAddress('');
+
+    setTimeout(() => {
+      navigate('/dine');
+    }, 2000);
   };
 
   return (
@@ -65,7 +70,6 @@ const Checkout = () => {
         <button type="submit" className="checkout-button">Place Order</button>
       </form>
     </div>
-    
   );
 };
 
